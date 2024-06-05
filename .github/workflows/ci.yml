@@ -22,8 +22,8 @@ jobs:
 
       # Ejecuta el comando para compilar el proyecto
       - name: Build with Gradle
-        run: ./test/gradlew build
+        run: cd demo && ./gradlew build
 
       # Ejecuta el comando para correr los tests del proyecto
       - name: Run tests with Gradle
-        run: ./test/gradlew test
+        run: cd demo && ./gradlew test
