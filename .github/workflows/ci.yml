@@ -19,9 +19,11 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
+
       #Ejecuta los test
       -name: Test with Gradle
         run : cd demo && ./gradlew test
+
       # Ejecuta el comando para compilar el proyecto
       - name: Build with Gradle
         run: cd demo && ./gradlew build
