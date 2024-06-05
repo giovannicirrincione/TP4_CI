@@ -12,20 +12,21 @@ jobs:
     runs-on: windows-latest
 
     steps:
+      #Usa la acción oficial de GitHub para clonar el repositorio.
       - name: Checkout repository
         uses: actions/checkout@v3
-
+      #Usa la acción para configurar JDK 17.
       - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
           distribution: 'temurin'
           java-version: '17'
-
+      #Da permiso de ejecución al script
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
-
+      #Ejecuta el comando para compilar el proyecto.
       - name: Build with Gradle
         run: ./gradlew build
-
+      #Ejecuta el comando  para correr los tests del proyecto.
       - name: Run tests with Gradle
         run: ./gradlew test
