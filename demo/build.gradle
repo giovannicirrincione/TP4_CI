@@ -35,9 +35,6 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
 }
 
-tasks.named('test') {
-	useJUnitPlatform()
-}
 test {
-	enabled = false // Deshabilitar la ejecución de tests durante la construcción
+	useJUnitPlatform() // Configuración para usar JUnit Platform en la tarea de test
 }
