@@ -11,9 +11,9 @@ public class pruebaTest {
     @Test
     public void testSumar() {
 
-        int a = 5;
+        int a = 4;
         int b = 3;
-        int expectedResult = 8;
+        int expectedResult = 7;
         pruebaTestService pruebaService = new pruebaTestService();
 
         // Act (actuar, llamar al método que quieres probar)
